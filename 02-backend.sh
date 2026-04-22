@@ -28,10 +28,14 @@ VALIDATE $? "download the code"
 cd /app
 VALIDATE $? "move to app"
 
+unzip /tmp/backend.zip
+VALIDATE $? "unzip the code"
+
 rm -rf /app/*
 VALIDATE $? "remove the everything in app"
 
 cd /app
+VALIDATE $? "move to app"
 
 npm install
 VALIDATE $? "install the dependies"
