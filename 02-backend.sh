@@ -53,3 +53,4 @@ VALIDATE $? "start the backend"
 systemctl enable backend
 VALIDATE $? "enable the backend"
 
+echo -e "$G backend server created sucessfully $n"
