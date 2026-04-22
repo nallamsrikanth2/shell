@@ -14,7 +14,7 @@ VALIDATE $? "start the mysqld"
 mysql -h db.nsrikanth.online -uroot -pExpenseApp@1 -e 'show databases;'  &>>$LOGFILE
 if [ $? -ne 0 ]
 then
-    mysql_secure_installation --set-root-pass ExpenseApp@1 >>$LOG_FILE
+    mysql_secure_installation --set-root-pass ExpenseApp@1 >>$LOGFILE
     VALIDATE $? "setup root password"
 else
     echo -e "$Y root password already setup $N"
