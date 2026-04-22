@@ -8,7 +8,7 @@ LOGFILE=/tmp/$SCRIPTNAME-$TIMESTAP.log
 R="\e[31m"
 G="\e[32m"
 N="\e[0m"
-y="\e[33m"
+Y="\e[33m"
 
 VALIDATE(){
     if [ $? -ne 0 ]
