@@ -53,4 +53,13 @@ VALIDATE $? "start the backend"
 systemctl enable backend
 VALIDATE $? "enable the backend"
 
+dnf install mysql -y
+VALIDATE $? "install mysql"
+
+mysql -h db.nsrikanth.online -uroot -pExpenseApp@1 < /app/schema/backend.sql
+VALIDATE $? "load the schema"
+
+systemctl restart backend
+VALIDATE $? "restart the backend"
+
 echo -e "$G backend server created sucessfully $n"
