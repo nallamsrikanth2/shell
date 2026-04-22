@@ -28,11 +28,12 @@ VALIDATE $? "download the code"
 cd /app
 VALIDATE $? "move to app"
 
+rm -rf /app/*
+VALIDATE $? "remove the everything in app"
+
 unzip /tmp/backend.zip
 VALIDATE $? "unzip the code"
 
-rm -rf /app/*
-VALIDATE $? "remove the everything in app"
 
 cd /app
 VALIDATE $? "move to app"
