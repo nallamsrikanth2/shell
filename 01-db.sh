@@ -20,6 +20,4 @@ else
     echo -e "$Y root password already setup $N"
 fi
 
-
-
-echo -e "$G db sever created sucessfully $N"  &>>$LOGFILE
+echo -e "$G db server created successfully $N"
